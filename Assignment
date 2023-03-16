@@ -1,0 +1,134 @@
+<html>
+    <body class="body">
+        <div class="box-2">
+    <h1>Temperature Converter</h1>
+    <div class="slidecontainer">
+        <p id="uvalue1" style="cursor:default;color: white;font-size: 12px; margin-left: 10px;opacity: 0.8;">- 273 &#8451;</p><p id="uvalue2" style="color: white;opacity: 0.8;; margin-left: 293px;font-size: 12px;position: absolute;margin-top: -30px;">1500 &#8451;</p>
+        <input type="range" min="-273" max="1500" value="600" class="slider1" id="range">
+        <input id="value1" type="number" style="background-color: white; border: none;outline: none; width: 300px; height: 35px; margin: 15px 24px; padding: 10px;color: black;font-size: 16px;" autofocus>
+        <p style="cursor:default;color: white;font-size: 20px;margin: 2px 17px;font-weight: 600;">Temperature:  <u1 id="amount" style="color: rgb(2, 140, 131);opacity:1;"></u1> <u1 id="unit" style="color: rgb(2, 140, 131);font-size: 17px;">&#8451;</u1>
+        </p>
+       <select id="select" class="select" onchange="myFunction()">
+         <option value="Farenhiet">Celcius to Farenheit</option>
+         <option value="Celcius">Farenheit to Celcius</option>
+         </select>
+        <p style="cursor:default;color: white;font-size: 21px;margin-left: 19px;margin-top: 30px;font-weight: 600;font-family:'Times New Roman', Times, serif;">Temperature <u1 id="info" style="cursor:default;color: white;margin-top: 30px;font-weight: 600;">in Farenheit:</u1> <u1 id="answer" style="color:rgb(2, 140, 131);"></u1> <u1 id="infoin" style="color:rgb(2, 140, 131);font-size: 18px;">&#8457;</u1>
+        </p>
+    </div>
+</div>
+</body>
+<style>
+    .body{
+        background-image: url('sunset2.jpg');
+    }
+    .select{
+        color: black;
+        background-color:white;
+        width: 200px;
+        height: 37px;
+        font-size: 15px;
+        margin-left: 23px;
+        margin-top: 18px;
+        padding: 5px;
+        outline: none;
+    }
+    .select option{
+        font-size: 16px;
+        outline: none;
+    }
+    .box-2{
+        box-shadow: 0px 0px 3px grey;
+        position: relative;
+        height: 350px;   
+        left: 37%;
+        top: 20%;
+        width: 345px;
+        background-color: black;
+        opacity: 0.8;
+    }
+    .box-2 h1{
+        cursor: default;
+        color: white;
+        font-size: 22px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: underline;
+        text-align: center;
+        padding: 13px;
+    }
+    .slider1{
+        cursor: pointer;
+        width: 330px;
+        opacity: 0.8;
+        margin: -10px 8px;
+    }
+
+</style>
+<script>
+    var range = document.getElementById('range');
+    var value1 = document.getElementById('value1');
+    var amount = document.getElementById('amount');
+    value1.value = amount.innerHTML = range.value;
+    var x = Math.round((value1.value*9/5)+32);
+    answer.innerHTML = x;
+    range.oninput = function(){
+        value1.value = amount.innerHTML = range.value;
+        var x = Math.round((value1.value*9/5)+32);
+        answer.innerHTML = x;
+    }
+    value1.oninput = function(){
+        amount.innerHTML = range.value = value1.value;
+        var x = Math.round((value1.value*9/5)+32);
+        answer.innerHTML = x;
+    }
+function myFunction(){
+    var text = document.getElementById('select').value;
+if(text == "Celcius"){
+    document.getElementById('uvalue1').innerHTML = "-459 &#8457;"
+    document.getElementById('uvalue2').innerHTML = "2732 &#8457;"
+    document.getElementById('unit').innerHTML = "&#8457;"
+    document.getElementById('info').innerHTML = "in Celcius:"
+    document.getElementById('infoin').innerHTML = "&#8451;"
+    document.getElementById('range').max = "2732";
+    document.getElementById('range').min = "-459";
+
+    value1.value = amount.innerHTML = range.value;
+    var x = Math.round((value1.value-32)*5/9);
+    answer.innerHTML = x;
+    range.oninput = function(){
+        value1.value = amount.innerHTML = range.value;
+        var x = Math.round((value1.value-32)*5/9);
+        answer.innerHTML = x;
+    }
+    value1.oninput = function(){
+        amount.innerHTML = range.value = value1.value;
+        var x = Math.round((value1.value-32)*5/9);
+        answer.innerHTML = x;
+    }
+}
+else{
+    document.getElementById('uvalue1').innerHTML = "-273 &#8451;"
+    document.getElementById('uvalue2').innerHTML = "1500 &#8451;"
+    document.getElementById('unit').innerHTML = "&#8451;"
+    document.getElementById('info').innerHTML = "in Farenheit:"
+    document.getElementById('infoin').innerHTML = "&#8457;"
+    document.getElementById('range').max = "1500";
+    document.getElementById('range').min = "-273";
+
+    value1.value = amount.innerHTML = range.value;
+    var x = Math.round((value1.value*9/5)+32);
+    answer.innerHTML = x;
+    range.oninput = function(){
+        value1.value = amount.innerHTML = range.value;
+        var x = Math.round((value1.value*9/5)+32);
+        answer.innerHTML = x;
+    }
+    value1.oninput = function(){
+        amount.innerHTML = range.value = value1.value;
+        var x = Math.round((value1.value*9/5)+32);
+        answer.innerHTML = x;
+    }
+}
+}
+
+</script>
+</html>
