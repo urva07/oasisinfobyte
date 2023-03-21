@@ -519,7 +519,8 @@
         input.value += "-";
         } 
     s.onclick = function(){
-        input.value += "*100";
+        var y = eval(input.value);
+        input.value = y*100;
         } 
     t.onclick = function(){
         var y = eval(input.value);
