@@ -1,0 +1,541 @@
+<html>
+    <body style="background-image:url('maths.jpg')">
+        <div class="box">
+            <div class="cover">
+            <input id="input" class="input" type="text" placeholder="calculate" autofocus>
+            <div class="ce" id="ce">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative;">CE</span>
+            </div>
+        </div>
+            <div class="container">
+            <div class="a" id="a">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative;">1</span>
+            </div>
+            <div class="b" id="b">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">2</span>
+            </div>
+            <div class="c" id="c">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">3</span>
+            </div>
+            <div class="d" id="d">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative;">4</span>
+            </div>
+            <div class="e" id="e">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">5</span>
+            </div>
+            <div class="f" id="f">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">6</span>
+            </div>
+            <div class="g" id="g">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative;">7</span>
+            </div>
+            <div class="h" id="h">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">8</span>
+            </div>
+            <div class="i" id="i">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">9</span>
+            </div>
+            <div class="j" id="j">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative;">.</span>
+            </div>
+            <div class="k" id="k">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">0</span>
+            </div>
+            <div class="l" id="l">
+                <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">&#8730;</span>
+            </div>
+            <div class="container-2">
+                <div class="m" id="m">
+                    <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">(</span>
+                </div>
+                <div class="n" id="n">
+                    <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">)</span>
+                </div>
+                <div class="o" id="o">
+                    <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">/</span>
+                </div>
+                <div class="p" id="p">
+                    <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">&times;</span>
+                </div>
+                <div class="q" id="q">
+                    <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">+</span>
+                </div>
+                <div class="r" id="r">
+                    <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">-</span>
+                </div>
+                <div class="s" id="s">
+                    <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">%</span>
+                </div>
+                <div class="t" id="t">
+                    <span style="user-select: none;color:white;font-size: 30px;top: 16px;position: relative">=</span>
+                </div>
+            </div>
+        </div>
+    </body>
+    <style>
+    .ce{
+        position: absolute;
+        border-radius: 7%;
+        width: 70px;
+        margin-left: 356px;
+        margin-top: -72.5px;
+        text-align: center;
+        background-color: orangered;
+        height: 70px;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .ce:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .ce:active{
+        box-shadow: 0px 0px 0px;
+    }
+    .box{
+        user-select: none;
+        box-shadow: 0px 0px 3px white;
+        border-radius: 2%;
+        position: relative;
+        height: 435px; 
+        left: 33.5%;        
+        top: 16%;
+        width: 450px;
+        background-color: black;
+        opacity: 1;
+    }
+    .cover{
+        position: relative;
+        width: 430px;
+        height: 60px;
+        font-size: 20px;
+        margin-left: 10px;
+        top: 10px;
+        border: 1px solid;
+    }
+    .cover input{
+        user-select: none;
+        width: 347px;
+        height: 73px;
+        color: rgb(70, 70, 70);
+        padding-left: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 27px;
+        opacity: 0.98;
+        outline: none;
+    }
+    .cover input::placeholder{
+        font-size: 27px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container{
+        grid-template-columns: auto auto auto;
+        display: grid;
+        row-gap: 10px;
+        margin-top: 40px;
+        margin-left: 12px;
+        height: 0px;
+        width: 0px;
+        column-gap: 10px;
+    }
+    .a{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;
+        text-align: center;
+        box-shadow: 0px 0px 3px white;
+        height: 70px;
+        border: 1px solid rgb(233, 233, 233);
+        cursor: pointer;
+    }
+    .a:active{
+        box-shadow: 0px 0px 0px;
+    }
+    .b{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;
+        text-align: center;
+        box-shadow: 0px 0px 3px white; 
+        height: 70px;
+        border: 1px solid rgb(233, 233, 233);
+        cursor: pointer;
+    }
+    .b:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .c{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        box-shadow: 0px 0px 3px white; 
+        height: 70px;
+        border: 1px solid rgb(233, 233, 233);
+        cursor: pointer;
+    }
+    .c:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .d{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        box-shadow: 0px 0px 3px white; 
+        height: 70px;
+        border: 1px solid rgb(233, 233, 233);
+        cursor: pointer;
+    }
+    .d:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .e{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        box-shadow: 0px 0px 3px white; 
+        height: 70px;
+        border: 1px solid rgb(233, 233, 233);
+        cursor: pointer;
+    }
+    .e:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .f{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        box-shadow: 0px 0px 3px white; 
+        height: 70px;
+        border: 1px solid rgb(233, 233, 233);
+        cursor: pointer;
+    }
+    .f:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .g{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;     
+        border-radius: 7%;   
+        text-align: center;
+        box-shadow: 0px 0px 3px white; 
+        height: 70px;
+        border: 1px solid rgb(233, 233, 233);
+        cursor: pointer;
+    }
+    .g:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .h{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        box-shadow: 0px 0px 3px white; 
+        height: 70px;
+        border: 1px solid rgb(233, 233, 233);
+        cursor: pointer;
+    }
+    .h:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .i{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        box-shadow: 0px 0px 3px white; 
+        height: 70px;
+        border: 1px solid rgb(233, 233, 233);
+        cursor: pointer;
+    }
+    .i:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .j{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        height: 70px;
+        background-color: orangered;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .j:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .j:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .k{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        box-shadow: 0px 0px 3px white; 
+        height: 70px;
+        border: 1px solid rgb(233, 233, 233);
+        cursor: pointer;
+    }
+    .k:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .l{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        height: 70px;
+        background-color: orangered;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .l:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .l:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    </style>
+    <style>
+    .container-2{
+            grid-template-columns: auto auto;
+            display: grid;
+            position: absolute;
+            row-gap: 10px;
+            margin-left: 273px;
+            height: 0px;
+            width: 0px;
+            column-gap: 10px; 
+    }
+    .m{
+        position: relative;
+        border-radius: 7%;
+        background-color: orangered;
+        width: 70px;        
+        text-align: center;
+        height: 70px;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .m:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .m:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .n{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        background-color: orangered;
+        height: 70px;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .n:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .n:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .o{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        background-color: orangered;
+        height: 70px;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .o:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .o:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .p{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        background-color: orangered;
+        height: 70px;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .p:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .p:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .q{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        background-color: orangered;
+        height: 70px;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .q:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .q:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .r{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        background-color: orangered;
+        height: 70px;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .r:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .r:active{
+        box-shadow: 0px 0px 0px;
+    }
+    .s{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        background-color: orangered;
+        height: 70px;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .s:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .s:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    .t{
+        position: relative;
+        border-radius: 7%;
+        width: 70px;        
+        text-align: center;
+        background-color: orangered;
+        height: 70px;
+        border: 1px solid orangered;
+        cursor: pointer;
+    }
+    .t:hover{
+        box-shadow: 0px 0px 2px white;
+    }
+    .t:active{
+        box-shadow: 0px 0px 0px;
+
+    }
+    </style>
+    <script>
+    var a = document.getElementById('a');
+    var b = document.getElementById('b');
+    var input = document.getElementById('input');
+    a.onclick = function(){
+       input.value += 1;
+        }
+    b.onclick = function(){
+        input.value += 2;
+        }
+    c.onclick = function(){
+        input.value += 3;
+        }
+    d.onclick = function(){
+        input.value += 4;
+        }
+    e.onclick = function(){
+        input.value += 5;
+        }
+    f.onclick = function(){
+        input.value += 6;
+        }
+    g.onclick = function(){
+        input.value += 7;
+        }
+    h.onclick = function(){
+        input.value += 8;
+        }
+    i.onclick = function(){
+        input.value += 9;
+        }
+    j.onclick = function(){
+        input.value += ".";
+        }
+    k.onclick = function(){
+        input.value += 0;
+        }
+    l.onclick = function(){
+        var z = Math.sqrt(input.value);
+        input.value = z;
+        }    
+    m.onclick = function(){
+        input.value += "(";
+        }    
+    n.onclick = function(){
+        input.value += ")";
+        } 
+    o.onclick = function(){
+        input.value += "/";
+        } 
+    p.onclick = function(){
+        input.value += "*";
+        } 
+    q.onclick = function(){
+        input.value += "+";
+        } 
+    r.onclick = function(){
+        input.value += "-";
+        } 
+    s.onclick = function(){
+        input.value += "*100";
+        } 
+    t.onclick = function(){
+        var y = eval(input.value);
+        input.value = y;
+    } 
+    </script>
+    <script>
+        var ce = document.getElementById('ce');
+        var input = document.getElementById('input');
+        ce.onclick = function(){
+            const y = input.value;
+            let text = "";
+            for(i=0;i<input.value.length - 1;i++){ 
+             text += y[i];  
+            }       
+             input.value = text;   
+        }
+    </script>
+</html>
